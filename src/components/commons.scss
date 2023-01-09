@@ -1,0 +1,7 @@
+@mixin transition($property) {
+    transition: $property 0.2s;
+}
+
+@mixin patat($amor) {
+    width: $amor;
+}

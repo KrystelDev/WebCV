@@ -1,24 +1,45 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from "react-router-dom";
 
-function App() {
+import { SideBarMenuItem, SideBarMenuCard } from "./types/types";
+import {FcAdvertising} from "react-icons/fc";
+import photoPerfil from "./yooo.png";
+import Home from "./page/Home";
+import FrameWork from "./page/FrameWork";
+
+function App(){
+  const item: SideBarMenuItem[] = [
+    {
+      id: '1',
+      label: 'Experiencia',
+      icon: FcAdvertising,
+      url: '/'
+    },
+    {
+      id: '2',
+      label: 'Estudios',
+      icon: FcAdvertising,
+      url: '/'
+    },
+    {
+      id: '3',
+      label: 'Len',
+      icon: FcAdvertising,
+      url: '/'
+    }
+  ]
+  const card: SideBarMenuCard = {
+    id: "card01",
+    displayName: "Krystel Dev",
+    photoUrl: photoPerfil,
+    title: "Front End Developer",
+    url: "/",
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div >
+      <Routes>
+        <Route path="" element={<Home items={item} card={card}/>} />
+        <Route path="/FrameWork" element={<FrameWork />} />
+      </Routes>
     </div>
   );
 }
