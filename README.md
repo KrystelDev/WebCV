@@ -5,6 +5,6 @@
 ## EN CONSTRUCCIÓN
 
 <img
-    src="./preview.png"
+    src="src/preview.png"
     width="80vw"
 />
