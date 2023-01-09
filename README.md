@@ -6,5 +6,4 @@
 
 <img
     src="src/preview.png"
-    width="80vw"
 />
